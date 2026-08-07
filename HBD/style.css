@@ -12,14 +12,19 @@
     --card-bg: rgba(23, 10, 38, 0.5);
     --card-border: rgba(255, 255, 255, 0.06);
 }
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
+/*body {
     font-family: 'Outfit', sans-serif;
-    background: var(--bg-dark);
+    
+    background: var(--romantic-gradient-4);
     background-image: var(--bg-gradient);
     color: var(--text-light);
     min-height: 100vh;
@@ -28,7 +33,44 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+}*/
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Great Vibes', cursive;
+  color: #fff;
+
+  /* Start with one gradient */
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  background-size: 400% 400%;
+
+  /* Animate the gradient */
+  animation: romanticGradient 20s ease infinite;
 }
+
+@keyframes romanticGradient {
+  0% {
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  }
+  25% {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+  }
+  50% {
+    background: linear-gradient(135deg, #ffd6d6, #ffe5b4);
+  }
+  75% {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef, #fbc2eb);
+  }
+  100% {
+    background: linear-gradient(135deg, #f7e7ce, #ffb3c6);
+  }
+}
+
+
+
 .bg-particles {
     position: absolute;
     top: 0;
@@ -625,7 +667,7 @@ body {
         margin-bottom: 8px;
     }
 }
-:root {
+/*:root {
     --envelope-x: 290px;
     --envelope-y: 190px;
     --envelope-bg: #800f2f; 
@@ -638,7 +680,30 @@ body {
     --letter-font: "Dancing Script", cursive;
     --heart-bg: #d90429;
     --heart-text: #ffffff;
+}*/
+:root {
+    --envelope-x: 290px;
+    --envelope-y: 190px;
+
+    /* Envelope colors */
+    --envelope-bg: #ffb3c6;       /* soft rose pink */
+    --envelope-border: #f7e7ce;   /* champagne gold */
+    --envelope-shadow: rgba(255, 182, 193, 0.4); /* gentle pink shadow */
+
+    /* Letter inside */
+    --letter-x: 270px;
+    --letter-y: 210px;
+    --letter-bg: #fff0f6;         /* blush white */
+    --letter-text: #5c3d46;       /* romantic muted brown */
+    --letter-font: "Dancing Script", cursive;
+
+    /* Heart accent */
+    --heart-bg: #ff4d6d;          /* rose red */
+    --heart-text: #ffffff;        /* pure white */
 }
+
+
+
 @media (min-width: 480px) {
     :root {
         --envelope-x: 390px;
@@ -937,7 +1002,7 @@ body {
 }
 .polaroid-style .closeLetter:hover {
     color: #ffffff;
-    background: #d90429;
+    background: #d904b2;
 }
 .polaroid-wrapper {
     width: 100%;
@@ -946,13 +1011,44 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/*.polaroid-img {
+    width: 100%;
+    height: calc(var(--letter-y) - 62px);
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.08);
+    
+}*/
+
 .polaroid-img {
     width: 100%;
     height: calc(var(--letter-y) - 62px);
     object-fit: cover;
     border-radius: 2px;
     border: 1px solid rgba(0,0,0,0.08);
+
+    /* Animation setup */
+    opacity: 0;
+    transform: scale(0.9);
+    animation: popUp 10s ease forwards; /* 2s = slow motion */
 }
+
+/* Keyframes for pop-up effect */
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .polaroid-text {
     font-family: var(--letter-font);
     font-size: 1.25rem;
