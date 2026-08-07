@@ -42,6 +42,7 @@ body {
   align-items: center;
   font-family: 'Great Vibes', cursive;
   color: #fff;
+  font-size:12px;
 
   /* Start with one gradient */
   background: linear-gradient(135deg, #ffdde1, #ee9ca7);
