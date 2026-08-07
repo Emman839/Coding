@@ -1,9 +1,9 @@
 'use strict';
 const SURPRISE_CONFIG = {
-    occasionText: "Happy Birthday, my love! 🎂",
+    occasionText: "Happy Birthday 29th, Babi! 🎂",
     partnerName: "Marylle 💖",
     senderName: "Gideon and Babi",
-    message: "On your special day, I just want you to know how much you mean to me. ❤️ You are my happiness, my comfort, and my favorite person in the world. Thank you for filling my life with love, laughter, and beautiful memories. Happy Birthday, my love. 🎂"
+    message: "Happy 29th Birthday 🎂 and Happy 6th Anniversary Bab! Today we celebrate not just your life, but also the love that makes it all so special. Wishing you endless happiness, health, and love. May your birthday and our anniversary remind you how cherished you truly are."
 };
 document.addEventListener('DOMContentLoaded', () => {
     const partnerNameEl = document.getElementById('partnerName');
@@ -268,7 +268,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let trailParticles = [];
     let heartSparks = [];
     const imageSources = [
-        "https://raw.githubusercontent.com/Emman839/Coding/main/HBD/src/babii.png",
+        "https://raw.githubusercontent.com/Emman839/Coding/15d2ebebfd79564d1145f33c5cd58bd2bf7b0858/HBD/src/babii.png?token=GHSAT0AAAAAAEE5Y66JGTGMO2KUH3M7F4H42TVJAFQ",,
         "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=150&auto=format&fit=crop&q=80",
         "https://images.unsplash.com/photo-1513272795190-0b7c527757ed?w=150&auto=format&fit=crop&q=80"
     ];
