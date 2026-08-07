@@ -11,7 +11,29 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+    <body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+    <source src="audio/romantic-guitar.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="playBtn">🎵 Play Music</button>
+
+    <script>
+    const audio = document.getElementById("bg-music");
+    const playBtn = document.getElementById("playBtn");
+
+    playBtn.addEventListener("click", () => {
+        if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸ Pause Music";
+        } else {
+        audio.pause();
+        playBtn.textContent = "🎵 Play Music";
+        }
+    });
+    </script>
 
     <div class="bg-particles" id="bgParticles"></div>
 
@@ -93,7 +115,7 @@
             
             <div class="letters-container" id="lettersContainer">
                  
-
+                
                 <div class="letter center draggable-item polaroid-style" id="letter4" tabindex="0">
                     <button class="closeLetter" title="Close Polaroid">✕</button>
                     <div class="polaroid-wrapper">

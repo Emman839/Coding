@@ -79,6 +79,31 @@
       0% { transform: translateX(-50%) translateY(100%); opacity: 0; }
       100% { transform: translateX(-50%) translateY(0); opacity: 1; }
     }
+
+    #playBtn {
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: 'Dancing Script', cursive;
+  color: #5c3d46;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+  transition: all 0.3s ease;
+}
+
+#playBtn:hover {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+  transform: scale(1.05);
+}
+
+#playBtn:active {
+  transform: scale(0.95);
+}
+
   </style>
 </head>
 <body>
@@ -91,26 +116,28 @@
   </div>
 
   <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="/HBD/audio/bgm.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<audio id="bg-music" loop>
+  <source src="audio/romantic-guitar.mp3" type="audio/mpeg">
+</audio>
 
-  <!-- Fade-in effect for music -->
-  <script>
-    window.addEventListener("load", () => {
-      const audio = document.getElementById("bg-music");
-      audio.volume = 15; // start silent
+<button id="playBtn">🎵 Play Music</button>
+
+<script>
+  const audio = document.getElementById("bg-music");
+  const playBtn = document.getElementById("playBtn");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
       audio.play();
+      playBtn.textContent = "⏸ Pause Music";
+    } else {
+      audio.pause();
+      playBtn.textContent = "🎵 Play Music";
+    }
+  });
+</script>
 
-      let fadeIn = setInterval(() => {
-        if (audio.volume < 1) {
-          audio.volume += 0.05; // increase volume gradually
-        } else {
-          clearInterval(fadeIn);
-        }
-      }, 500); // every 0.5s
-    });
-  </script>
+
+
 </body>
 </html>

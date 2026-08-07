@@ -1057,3 +1057,31 @@ body {
     font-weight: 700;
     text-shadow: none !important;
 }
+
+#playBtn {
+  position: absolute;   /* Fixes it to the page */
+  top: 20px;            /* Distance from the top */
+  right: 20px;          /* Distance from the right */
+  
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Dancing Script', cursive;
+  color: #5c3d46;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.6);
+  transition: all 0.3s ease;
+}
+
+#playBtn:hover {
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
+  transform: scale(1.05);
+}
+
+#playBtn:active {
+  transform: scale(0.95);
+}
