@@ -1,6 +1,6 @@
 'use strict';
 const SURPRISE_CONFIG = {
-    occasionText: "Happy Birthday 29th, Babi! 🎂",
+    occasionText: "Happy 29th Birthday, Babi! 🎂",
     partnerName: "Marylle 💖",
     senderName: "Gideon and Babi",
     message: "Happy 29th Birthday 🎂 and Happy 6th Anniversary Bab! Today we celebrate not just your life, but also the love that makes it all so special. Wishing you endless happiness, health, and love. May your birthday and our anniversary remind you how cherished you truly are."
